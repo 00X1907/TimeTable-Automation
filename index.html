@@ -1,0 +1,222 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Schedule</title>
+
+        <style>
+            body {
+                font-family: Inter, 'Segoe UI', sans-serif;
+                background: #ECEDEF;
+                margin: 0;
+                padding: 45px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1200px;
+            }
+
+            h1 {
+                text-align: left;
+                font-weight: 800;
+                margin-bottom: 30px;
+                color: #1F1F1F;
+                font-size: 2.2em;
+                line-height: 1.1;
+            }
+
+            h1 span {
+                display: block;
+                font-size: 0.55em;
+                color: #6C6C6C;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 22px;
+            }
+
+            .card {
+                background: #FFFFFF;
+                border: 1.5px solid #DADADA;
+                border-radius: 10px;
+                padding: 18px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                transition: border 0.15s ease, box-shadow 0.15s ease;
+            }
+
+            .card:hover {
+                border-color: #A0A0A0;
+                box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+            }
+
+            /* TOP ROW */
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                background: #F1F3F2;
+                padding: 8px 10px;
+                border-radius: 6px;
+                font-weight: 700;
+                color: #111;
+            }
+
+            .start-time {
+                font-size: 1em;
+            }
+
+            .end-time {
+                font-size: 0.9em;
+                color: #656565;
+            }
+            
+            .mid-row {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 3px;
+            }
+
+            .code {
+                background: #FFA500;
+                padding: 4px 10px;
+                border-radius: 6px;
+                font-size: 0.75em;
+                font-weight: 700;
+                color: #000000;
+            }
+
+            .room {
+                background: #E4E4E4;
+                padding: 4px 10px;
+                border-radius: 6px;
+                font-size: 0.75em;
+                font-weight: 600;
+                color: #555;
+            }
+
+            .title {
+                margin: 5px 0 0;
+                font-size: 1.05em;
+                font-weight: 700;
+                color: #232323;
+            }
+
+            .instructor {
+                margin: 0;
+                font-size: 0.85em;
+                color: #6D6D6D;
+                font-style: italic;
+            }
+
+            .empty-state {
+                background: white;
+                padding: 50px;
+                border-radius: 12px;
+                border: 2px solid #D5D5D5;
+                text-align: center;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>
+                <span>Today's Schedule</span>
+                Tuesday
+            </h1>
+
+            <div class="grid">
+                
+            <div class="card">
+                <div class="top-row">
+                    <span class="start-time">08:00</span>
+                    <span class="end-time">08:50</span>
+                </div>
+
+                <div class="mid-row">
+                    <span class="code">24CSEN3321</span>
+                    <span class="room">ICT / 527</span>
+                </div>
+
+                <h2 class="title">Critical Thinking For Engineers and Scientists</h2>
+                <p class="instructor"> Manohar Manikanta Pattisapu</p>
+            </div>
+            
+            <div class="card">
+                <div class="top-row">
+                    <span class="start-time">09:00</span>
+                    <span class="end-time">09:50</span>
+                </div>
+
+                <div class="mid-row">
+                    <span class="code">24CSEN2011</span>
+                    <span class="room">ICT / 527</span>
+                </div>
+
+                <h2 class="title">Operating Systems</h2>
+                <p class="instructor"> Godi Appa Rao</p>
+            </div>
+            
+            <div class="card">
+                <div class="top-row">
+                    <span class="start-time">10:00</span>
+                    <span class="end-time">10:50</span>
+                </div>
+
+                <div class="mid-row">
+                    <span class="code">HSMCH102</span>
+                    <span class="room">ICT / 119</span>
+                </div>
+
+                <h2 class="title">Universal human values 2: understanding harmony</h2>
+                <p class="instructor"> Kothapalli Arun Vikram</p>
+            </div>
+            
+            <div class="card">
+                <div class="top-row">
+                    <span class="start-time">11:00</span>
+                    <span class="end-time">11:50</span>
+                </div>
+
+                <div class="mid-row">
+                    <span class="code">MATH1341</span>
+                    <span class="room">ICT / 119</span>
+                </div>
+
+                <h2 class="title">Calculus and Differential Equations</h2>
+                <p class="instructor"> Bikshan Chakraborty</p>
+            </div>
+            
+            <div class="card">
+                <div class="top-row">
+                    <span class="start-time">14:00</span>
+                    <span class="end-time">14:50</span>
+                </div>
+
+                <div class="mid-row">
+                    <span class="code">MECH2201</span>
+                    <span class="room">ICT / 306</span>
+                </div>
+
+                <h2 class="title">Solar Energy</h2>
+                <p class="instructor"> Battula Suryanarayana Murthy</p>
+            </div>
+            
+            </div>
+        </div>
+    </body>
+    </html>
+    
